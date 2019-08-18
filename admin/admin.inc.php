@@ -9,11 +9,15 @@
  * file that was distributed with this source code.
  */
 
+if (!defined('PHPWG_ROOT_PATH')) {
+    define('PHPWG_ROOT_PATH', __DIR__ . '/../../../');
+}
+
 // Need upgrade?
 global $conf;
 include(__DIR__ . '/upgrade.inc.php');
 
-\Phyxo\Functions\Language::load_language('theme.lang', PHPWG_THEMES_PATH . '/elegant/', ['language' => $user['language']]);
+\Phyxo\Functions\Language::load_language('theme.lang', __DIR__ . '/../', ['language' => $user['language']]);
 
 $config = [
     'p_main_menu' => 'on', //on - off - disabled

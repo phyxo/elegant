@@ -1,4 +1,3 @@
-elegant/local_head.tpl
 elegant/screenshot.png
 elegant/css/icon/img_prev.png
 elegant/css/icon/rating-stars.png
@@ -15,8 +14,9 @@ elegant/admin/upgrade.inc.php
 elegant/admin/admin.tpl
 elegant/admin/admin.inc.php
 elegant/admin/jquery.ui.button.css
-elegant/language/en_UK/theme.lang.php
+elegant/language/en_GB/theme.lang.php
 elegant/language/fr_FR/theme.lang.php
 elegant/MANIFEST
+elegant/template/local_head.tpl
 elegant/js/scripts_picture_page.js
 elegant/themeconf.inc.php

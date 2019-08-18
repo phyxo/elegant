@@ -11,30 +11,36 @@
 
 /*
 Theme Name: Elegant
-Version: 3.0.4
+Version: 4.0.0
 Description: Dark background, grayscale.
 Theme URI: https://ext.phyxo.net/extension_view.php?eid=4
 Author: Nicolas Roudaire
 Author URI: https://www.phyxo.net
 
 The theme is based on the original one for piwigo.
- */
+*/
 
 $themeconf = [
     'name' => 'elegant',
     'parent' => 'legacy',
-    'local_head' => 'local_head.tpl'
+    'local_head' => 'template/local_head.tpl'
 ];
 
+if (!defined('PHPWG_ROOT_PATH')) {
+    define('PHPWG_ROOT_PATH', __DIR__.'/../../');
+}
+
 // Need upgrade?
-global $conf;
 include(__DIR__ . '/admin/upgrade.inc.php');
 
-\Phyxo\Functions\Plugin::add_event_handler('init', 'set_config_values_elegant');
-function set_config_values_elegant()
+\Phyxo\Functions\Plugin::add_event_handler(
+    'init',
+    function() use($conf, $template) {
+        set_config_values_elegant($conf, $template);
+    }
+);
+function set_config_values_elegant($conf, $template)
 {
-    global $conf, $template;
-
     if (is_array($conf['elegant'])) {
         $config = $conf['elegant'];
     } else {
