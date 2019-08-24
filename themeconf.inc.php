@@ -11,7 +11,7 @@
 
 /*
 Theme Name: Elegant
-Version: 4.0.0
+Version: 4.0.1
 Description: Dark background, grayscale.
 Theme URI: https://ext.phyxo.net/extension_view.php?eid=4
 Author: Nicolas Roudaire

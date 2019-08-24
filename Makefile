@@ -6,7 +6,7 @@ TARGET=../target
 config: clean manifest
 	mkdir -p $(DIST)/$(THEME_NAME)
 
-	cp -pr admin css js language local_head.tpl screenshot.png themeconf.inc.php $(DIST)/$(THEME_NAME)/; \
+	cp -pr admin css js language local_head.tpl screenshot.png template themeconf.inc.php MANIFEST $(DIST)/$(THEME_NAME)/; \
 	find $(DIST) -name '*~' -exec rm \{\} \;
 
 dist: config
